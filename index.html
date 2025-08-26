@@ -3,53 +3,93 @@
 <head>
   <title>PROYECTO YAK</title>
   <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: #E6E6E6; /* Fondo gris */
+      color: #000000;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto;
+      width: 150px; /* Tamaño ajustable */
+      height: auto;
+    }
+  </style>
 </head>
-<body bgcolor="#E6E6E6" text="#000000">
+<body>
 
-<center>
-  <h1>PROYECTO YAK</h1>
-</center>
+<!-- === Versión en Español === -->
+<div class="section">
+  <center>
+    <!-- Logo YAK -->
+    <img src="logo 	yak.jpg" alt="logo YAK" class="logo">
+    <h1>PROYECTO YAK</h1>
+  </center>
 
-<h2>Presentación</h2>
-<p>Somos el equipo YAK, conformado por:</p>
-<ul>
-  <li>Alonso Lipe Keanu Alfredo</li>
-  <li>Benítez Simerman Leander Yunnuel</li>
-  <li>Gracia Sánchez Ángel Federico</li>
-</ul>
-<p>Los tres somos de nacionalidad mexicana, y formamos parte del taller de Robótica Aplicada en PILARES Parque Cuitláhuac.</p>
+  <h2>Presentación</h2>
+  <p>Somos el equipo YAK, conformado por:</p>
+  <ul>
+    <li>Alonso Lipe Keanu Alfredo</li>
+    <li>Benítez Simerman Leander Yunnuel</li>
+    <li>Gracia Sánchez Ángel Federico</li>
+  </ul>
+  <p>Los tres somos de nacionalidad mexicana, y formamos parte del taller de Robótica Aplicada en PILARES Parque Cuitláhuac.</p>
 
-<h2>Resumen del Proyecto</h2>
-<p>El proyecto busca resolver el problema de fugas de agua. En México se paga hasta 807 pesos cada dos meses por el consumo de entre 28,000 y 48,000 litros de agua, dependiendo del uso familiar. Las fugas hídricas aumentan el consumo hasta un 150% más. Nuestro proyecto detecta a tiempo estas fugas para evitar el desperdicio y el gasto innecesario.</p>
-<p>Utiliza sensores que detectan humedad, envían los datos mediante Bluetooth al celular del usuario, quien puede ver el nivel de humedad en una app, evitar daños y prevenir problemas mayores.</p>
-<p>El valor comercial estimado es entre $400 y $500 pesos mexicanos, con base en el precio de los componentes.</p>
+  <h2>Resumen del Proyecto</h2>
+  <p>El proyecto busca resolver el problema de fugas de agua. En México se paga hasta 807 pesos cada dos meses por el consumo de entre 28,000 y 48,000 litros de agua, dependiendo del uso familiar. Las fugas hídricas aumentan el consumo hasta un 150% más. Nuestro proyecto detecta a tiempo estas fugas para evitar el desperdicio y el gasto innecesario.</p>
+  <p>Utiliza sensores que detectan humedad, envían los datos mediante Bluetooth al celular del usuario, quien puede ver el nivel de humedad en una app, evitar daños y prevenir problemas mayores.</p>
+  <p>El valor comercial estimado es entre $400 y $500 pesos mexicanos, con base en el precio de los componentes.</p>
 
-<h2>Solución Robótica</h2>
-<p>La idea surgió por la falta de agua en Iztapalapa, CDMX, y las fugas frecuentes por infraestructura antigua y sobreexplotación. Queríamos una solución sencilla y realista, a diferencia de otras opciones como robots que viajan por tuberías, los cuales requieren permisos o son costosos (como el "pipebot" en Londres).</p>
+  <h2>Solución Robótica</h2>
+  <p>La idea surgió por la falta de agua en Iztapalapa, CDMX, y las fugas frecuentes por infraestructura antigua y sobreexplotación. Queríamos una solución sencilla y realista, a diferencia de otras opciones como robots que viajan por tuberías, los cuales requieren permisos o son costosos (como el "pipebot" en Londres).</p>
 
-<h2>Construcción Mecánica</h2>
-<ul>
-  <li>Arduino Nano</li>
-  <li>Sensor DHT11</li>
-  <li>Sensor Higrómetro FC-28</li>
-  <li>Módulo Bluetooth HC-06</li>
-  <li>2 pilas 18650</li>
-  <li>Portapilas</li>
-  <li>Interruptor</li>
-  <li>Protoboard</li>
-</ul>
+  <h2>Construcción Mecánica</h2>
+  <ul>
+    <li>Arduino Nano</li>
+    <li>Sensor DHT11</li>
+    <li>Sensor Higrómetro FC-28</li>
+    <li>Módulo Bluetooth HC-06</li>
+    <li>2 pilas 18650</li>
+    <li>Portapilas</li>
+    <li>Interruptor</li>
+    <li>Protoboard</li>
+  </ul>
 
-<h2>Diagrama de Conexión</h2>
-<ul>
-  <li>DHT11: VCC → 5V, GND → GND, DATA → Pin digital 2</li>
-  <li>Sensor FC-28: VCC → 5V, GND → GND, A0 → Pin A0</li>
-  <li>Bluetooth HC-06: VCC → 5V, GND → GND, TX → RX (pin 0), RX → TX (pin 1)</li>
-  <li>Buzzer: Positivo → Pin 4, Negativo → GND</li>
-  <li>Pilas: conectadas a Vin y GND del Arduino por interruptor</li>
-</ul>
+  <h2>Diagrama de Conexión</h2>
+  <ul>
+    <li>DHT11: VCC → 5V, GND → GND, DATA → Pin digital 2</li>
+    <li>Sensor FC-28: VCC → 5V, GND → GND, A0 → Pin A0</li>
+    <li>Bluetooth HC-06: VCC → 5V, GND → GND, TX → RX (pin 0), RX → TX (pin 1)</li>
+    <li>Buzzer: Positivo → Pin 4, Negativo → GND</li>
+    <li>Pilas: conectadas a Vin y GND del Arduino por interruptor</li>
+  </ul>
 
-<h2>Código en Arduino</h2>
-<pre><code>#include &lt;DHT.h&gt;
+  <h2>Código en Arduino</h2>
+  <pre><code>#include &lt;DHT.h&gt;
 #define DHTPIN 2
 #define DHTTYPE DHT11
 #define FC28_PIN A0
@@ -97,41 +137,64 @@ void loop() {
 }
 </code></pre>
 
-<h2>Diseño de la App</h2>
-<p>La app fue creada con MIT App Inventor. Es fácil de usar, compatible con Bluetooth, permite personalización y futuras mejoras.</p>
+  <h2>Diseño de la App</h2>
+  <p>La app fue creada con MIT App Inventor. Es fácil de usar, compatible con Bluetooth, permite personalización y futuras mejoras.</p>
 
-<h2>Diseño del Prototipo</h2>
-<ul>
-  <li>Gabinete vertical con sensores estratégicamente ubicados</li>
-  <li>LED tricolor en la parte superior</li>
-  <li>Buzzer y switch en el lateral</li>
-  <li>Componentes internos protegidos</li>
-  <li>Patas para evitar movimiento</li>
-</ul>
+  <h2>Diseño del Prototipo</h2>
+  <ul>
+    <li>Gabinete vertical con sensores estratégicamente ubicados</li>
+    <li>LED tricolor en la parte superior</li>
+    <li>Buzzer y switch en el lateral</li>
+    <li>Componentes internos protegidos</li>
+    <li>Patas para evitar movimiento</li>
+  </ul>
 
-<h2>Página Web del Proyecto</h2>
-<p>Desarrollamos una página web con GitHub Pages en: <br>
-<a href="https://humedadyak.github.io/YAK/" target="_blank">https://humedadyak.github.io/YAK/</a></p>
-<p>El sitio expone todo el contenido del proyecto, y en futuras versiones incluirá galería, lecturas en tiempo real y simulaciones.</p>
+  <h2>Página Web del Proyecto</h2>
+  <p>Desarrollamos una página web con GitHub Pages en: <br>
+  <a href="https://humedadyak.github.io/YAK/" target="_blank">https://humedadyak.github.io/YAK/</a></p>
 
-<h2>Impacto Social e Innovación</h2>
-<p>El proyecto tiene impacto en tres áreas:</p>
-<ul>
-  <li><b>Social:</b> ayuda a las familias a detectar fugas sin plomeros ni conocimientos técnicos.</li>
-  <li><b>Económico:</b> evita facturas altas y daños por humedad, lo cual representa ahorro.</li>
-  <li><b>Ambiental:</b> evita desperdicio de agua, especialmente en zonas como Iztapalapa con escasez.</li>
-</ul>
-<p>También mejora la salud pública, al prevenir moho, hongos y enfermedades respiratorias.</p>
+  <h2>Impacto Social e Innovación</h2>
+  <p>El proyecto tiene impacto en tres áreas:</p>
+  <ul>
+    <li><b>Social:</b> ayuda a las familias a detectar fugas sin plomeros ni conocimientos técnicos.</li>
+    <li><b>Económico:</b> evita facturas altas y daños por humedad, lo cual representa ahorro.</li>
+    <li><b>Ambiental:</b> evita desperdicio de agua, especialmente en zonas como Iztapalapa con escasez.</li>
+  </ul>
+  <p>También mejora la salud pública, al prevenir moho, hongos y enfermedades respiratorias.</p>
 
-<h2>Fuentes</h2>
-<ul>
-  <li><a href="https://www.gob.mx/conagua">CONAGUA</a></li>
-  <li><a href="https://www.unwater.org">UN-Water</a></li>
-  <li><a href="http://www.nahb.org">NAHB</a></li>
-  <li><a href="https://www.statista.com">Statista</a></li>
-  <li><a href="https://www.worldbank.org">World Bank</a></li>
-  <li><a href="https://www.gob.mx/mita">Gobierno de México</a></li>
-</ul>
+  <h2>Fuentes</h2>
+  <ul>
+    <li><a href="https://www.gob.mx/conagua">CONAGUA</a></li>
+    <li><a href="https://www.unwater.org">UN-Water</a></li>
+    <li><a href="http://www.nahb.org">NAHB</a></li>
+    <li><a href="https://www.statista.com">Statista</a></li>
+    <li><a href="https://www.worldbank.org">World Bank</a></li>
+    <li><a href="https://www.gob.mx/mita">Gobierno de México</a></li>
+  </ul>
+</div>
+
+<hr size="5" color="blue">
+
+<!-- === Versión en Inglés === -->
+<div class="section">
+  <center>
+    <!-- Logo YAK -->
+    <img src="logo_yak.jpg" alt="logo YAK" class="logo">
+    <h1>YAK PROJECT</h1>
+  </center>
+
+  <h2>Introduction</h2>
+  <p>We are team YAK, composed of:</p>
+  <ul>
+    <li>Alonso Lipe Keanu Alfredo</li>
+    <li>Benítez Simerman Leander Yunnuel</li>
+    <li>Gracia Sánchez Ángel Federico</li>
+  </ul>
+  <p>The three of us are Mexican nationals, and we are part of the Applied Robotics workshop at PILARES Parque Cuitláhuac.</p>
+
+  <!-- Aquí seguiría el mismo contenido traducido al inglés -->
+  <!-- (Resumen del Proyecto, Solución Robótica, Construcción Mecánica, etc.) -->
+</div>
 
 </body>
 </html>
